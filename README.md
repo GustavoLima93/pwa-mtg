@@ -15,7 +15,7 @@
 - Clone o Repositorio  
 - Utilize o Comando npm install na raiz do projeto para instalar as dependências   
 - Utilize o comando ng serve para inicializar o servidor   
-- Acesse do seu navegador a url > http://localhost:4200/home  
+- Acesse do seu navegador a url  http://localhost:4200 
 
 # Testar PWA
 
