@@ -17,6 +17,7 @@ export class CardsComponent implements OnInit, OnDestroy {
   public totalCards: number;
   public showBoundaryLinks = true;
   public name: string;
+  public spin = false;
 
   constructor(
     private cardService: CardService
@@ -27,11 +28,18 @@ export class CardsComponent implements OnInit, OnDestroy {
   }
 
   getCards(page?: string) {
-   this.inscricao = this.cardService.getCards(page,this.name).subscribe((data: any) => {
+    this.spin = true
+    this.inscricao = this.cardService.getCards(page, this.name).subscribe((data: any) => {
       this.cards = data.body.cards.filter((card: Card) => {
         return card.imageUrl;
       });
       this.totalCards = data.headers.get('total-count')
+      this.spin = false;
+    }, err => {
+      console.log(err)
+      this.spin = false;
+    }, () => {
+      this.spin = false;
     })
   }
 

@@ -7,6 +7,8 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { CardsComponent } from './components';
 
 
+
+
 @NgModule({
   declarations: [
     CardsComponent
