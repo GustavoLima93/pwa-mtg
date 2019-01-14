@@ -18,9 +18,10 @@ export class CardsComponent implements OnInit, OnDestroy {
   public showBoundaryLinks = true;
   public name: string;
   public spin = false;
+  public currentPage: number;
 
   constructor(
-    private cardService: CardService
+    public cardService: CardService
   ) { }
 
   ngOnInit() {
@@ -44,8 +45,14 @@ export class CardsComponent implements OnInit, OnDestroy {
   }
 
   pageChanged(event: any) {
+    this.cardService.setPaginaAtual(event.page);
     const page = event.page;
     return this.getCards(page);
+  }
+
+  searchCard() {
+    this.cardService.setPaginaAtual(1);
+    return this.getCards();
   }
 
   scrollTop() {
