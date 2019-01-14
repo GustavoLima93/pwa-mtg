@@ -7,8 +7,8 @@
 
 # Modulos externos
 
--Ngx Bootstrap   
--@angular/PWA  
+- Ngx Bootstrap   
+- @angular/PWA  
 
 # Iniciar o Projeto Local
 

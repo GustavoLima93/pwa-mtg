@@ -1,0 +1,22 @@
+<div class="encapsulado">
+  <div class="col-lg-3 ajst-search">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control ajst-input" [(ngModel)]="name" placeholder="Digite o nome da carta que deseja encontrar.">
+      <div class="input-group-append">
+        <button class="btn btn-outline-dark" type="button" id="button-addon2" (click)="getCards()">Buscar</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-columns row ajst-cards">
+    <div class="card card-shadown text-center" *ngFor="let card of cards">
+      <img src="{{card.imageUrl}}" class="card-img-top" alt="...">
+    </div>
+  </div>
+  <div *ngIf="totalCards">
+    <pagination _nghost-pmm-5 *ngIf="cards" style="float:right; margin-top:15px; margin-right: 15px" (pageChanged)="pageChanged($event)"
+      [totalItems]="totalCards" [maxSize]="3" [boundaryLinks]="showBoundaryLinks" previousText="&lsaquo;" nextText="&rsaquo;"
+      firstText="&laquo;" lastText="&raquo;"></pagination>
+      <button type="button" class="btn btn-outline-dark pull-left margin-left" (click)="scrollTop()">Top <i class="fa fa-arrow-up"
+        aria-hidden="true"></i></button>
+  </div>
+</div>

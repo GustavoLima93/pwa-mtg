@@ -1,0 +1,42 @@
+.encapsulado {
+    [_nghost-pmm-5] {
+        .page-link {
+            color: black; // background-color: #F3F3F3;
+            border-color: black
+        }
+        .page-item.active .page-link {
+            background-color: black;
+            border-color: white(184, 153, 153);
+            color: white
+        }
+    }
+
+.ajst-cards{
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.card-shadown{
+    box-shadow: 0 5px 5px rgb(216, 211, 211);    
+    max-width: 250px!important;
+    margin: auto;
+}
+
+
+.ajst-search{
+    margin-top: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.ajst-input{
+    border: 1px solid;
+}
+
+.margin-left{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+}
